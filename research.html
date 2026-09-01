@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Research interests of Tim Tomashevskiy: adaptive AI safety, safe continual reinforcement learning, safety under nonstationarity, predictive safety, and runtime safety." name="description"/>
+<title>Research — Tim Tomashevskiy</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header research-site-header">
+<div class="shell nav-wrap research-nav-wrap">
+<nav aria-label="Primary navigation" class="nav">
+<a class="active" href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="resources.html">Reading Guide</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+</div>
+</header>
+<main>
+<section class="research-page shell">
+<article class="research-copy">
+<div class="research-brand-row">
+<a class="brand" href="index.html">TIM TOMASHEVSKIY</a>
+</div>
+<section class="research-hero research-hero-inline" id="adaptive-ai-safety">
+<div class="research-kicker">Research Interests</div>
+<h1 class="research-title">Adaptive AI Safety</h1>
+<div aria-hidden="true" class="accent-line"></div>
+<p class="research-subtitle">Toward AI safety as a capability maintained throughout operation, not merely a property specified at design time.</p>
+<div aria-label="Research areas" class="research-tags">
+<span><a href="#adaptive-ai-safety">Adaptive AI Safety</a></span><span><a href="#current-research">Safe Continual Reinforcement Learning</a></span><span><a href="#runtime-safety">Runtime Safety</a></span>
+</div>
+</section>
+<section class="research-block" id="research-focus">
+<h2>Research Focus</h2>
+<p>My research focuses on <strong>AI safety for adaptive and autonomous systems</strong>, with particular interests in safe and continual reinforcement learning, safety under nonstationarity, runtime safety, and functional safety for safety-critical systems.</p>
+<blockquote>How can an autonomous learning system remain safe when its environment, knowledge, operating conditions, and the concrete constraints required for safe behavior change over time?</blockquote>
+<p>My long-term goal is to develop AI systems for which safety is not merely a static property specified at design time, but a capability maintained throughout operation. Such systems should recognize safety-relevant changes, anticipate emerging risks, adapt their safety mechanisms when appropriate, and act conservatively when reliable adaptation is not possible.</p>
+</section>
+<section class="research-block" id="current-research">
+<h2>Current Research: Adaptive Safety under Nonstationarity</h2>
+<p>My current research focuses on <strong>safe continual reinforcement learning in nonstationary environments</strong>. Many safe-RL formulations assume that safety constraints or models specified for a particular operating regime remain valid. Under nonstationarity, however, a previously appropriate constraint can become obsolete, overly conservative, or unsafe. Moreover, even when an appropriate new constraint can be identified, the environment may change faster than the learning system can safely adapt. These two problems—<strong>constraint validity and adaptation speed</strong>—are central to my research.</p>
+<p id="adaptive-safety-constraints">I address them by treating concrete safety constraints as <strong>adaptive objects anchored to more stable, higher-level safety goals</strong>. <span id="lilac-plus">My LILAC+ framework</span> combines <span id="context-based-constraints">context-based constraints</span> that adapt safety requirements to current and predicted conditions; <span id="adaptation-speed-constraints">adaptation-speed constraints</span> that assess whether required adaptation exceeds the agent's estimated capacity; and <span id="soft-to-hard-constraints">soft-to-hard mechanisms</span> that translate cumulative safety budgets into local constraints suitable for runtime enforcement.</p>
+<p id="proactive-safety">A related line of my work develops <strong>proactive context-forecasted safety constraints</strong>. Rather than waiting until a distribution shift or safety violation occurs, the system infers environmental context, forecasts its evolution, accounts for predictive uncertainty, and constructs anticipatory safety constraints. The objective is to move safety from reactive correction toward <strong>proactive risk avoidance</strong>.</p>
+<p>I also develop <strong>evaluation methodologies for safe continual RL under controlled nonstationarity</strong>, including stationary, seen-nonstationary, and unseen-nonstationary regimes, with explicit evaluation of constraint validity, physical safety, intervention burden, and adaptation behavior.</p>
+</section>
+<section class="research-block">
+<div class="section-heading-row">
+<h2>Research Directions</h2>
+<p>My current work motivates several connected directions toward a broader methodology for <strong>adaptive AI safety</strong>.</p>
+</div>
+<div class="direction-list">
+<section class="direction-item" id="predictive-safety">
+<div class="direction-index">01</div>
+<div>
+<h3>Predictive and Proactive AI Safety</h3>
+<p>I am interested in systems that reason not only about current risk but also about <strong>plausible future contexts and the future validity of their own safety assumptions</strong>. This includes context and risk forecasting, uncertainty calibration, and anticipatory constraint construction. A central question is how AI systems can anticipate the safety consequences of developing changes <strong>before unsafe conditions arise</strong>.</p>
+</div>
+</section>
+<section class="direction-item" id="runtime-safety">
+<div class="direction-index">02</div>
+<div>
+<h3>Adaptive Runtime Safety and AI Control</h3>
+<p>I am interested in architectures combining policy-level adaptation with <strong>runtime monitoring, shielding, dynamic constraints, fallback behavior, and adaptive intervention</strong>. When environmental change exceeds an agent's ability to adapt safely, the system may need to tighten constraints, restrict autonomy, invoke fallback mechanisms, seek external supervision, and determine when normal autonomous operation can safely resume.</p>
+</div>
+</section>
+<section class="direction-item" id="novelty-safety">
+<div class="direction-index">03</div>
+<div>
+<h3>Safety under Novelty and Unmodelled Change</h3>
+<p>A particularly difficult problem arises when an autonomous system encounters conditions outside its learned experience. I am interested in detecting unfamiliar contexts, quantifying epistemic uncertainty, determining when learned predictions or constraints should no longer be trusted, and connecting these assessments to conservative runtime behavior.</p>
+<blockquote class="compact-quote">How should an autonomous system recognize the limits of its own safety model?</blockquote>
+</div>
+</section>
+<section class="direction-item" id="long-horizon-safety">
+<div class="direction-index">04</div>
+<div>
+<h3>Long-Horizon Agent Safety</h3>
+<p>As AI systems become increasingly autonomous, safety must account for <strong>accumulated risk and evolving interactions over trajectories</strong>, rather than individual actions alone. I am interested in trajectory-level risk monitoring, dynamic safety budgets, and adaptive intervention policies that coordinate local safety decisions with longer-term safety requirements.</p>
+</div>
+</section>
+<section class="direction-item" id="multi-agent-safety">
+<div class="direction-index">05</div>
+<div>
+<h3>Multi-Agent Safety under Nonstationarity</h3>
+<p>Multiple learning agents create an important source of <strong>endogenous nonstationarity</strong> because their behavior and strategies can themselves change. I am interested in forecasting safety-relevant changes in other agents, adapting constraints to changing interaction regimes, detecting emerging collective risks, and extending adaptive-safety methodologies to multi-agent environments.</p>
+</div>
+</section>
+</div>
+</section>
+<section class="research-block bridge-block" id="functional-safety">
+<h2>From Functional Safety to Adaptive AI Safety</h2>
+<p>My AI-safety research grows from a broader background in <strong>functional safety and safety-critical software-intensive systems</strong>, including autonomous and automotive systems. Classical functional-safety engineering contributes concepts such as specification, architectural assurance, runtime monitoring, fault handling, and safe fallback.</p>
+<p>Learning-enabled systems introduce an additional challenge: <strong>system behavior and the conditions relevant to safety can continue changing after deployment</strong>. I am interested in bringing these perspectives together to develop safety-engineering principles for adaptive systems whose behavior and operating conditions cannot be completely specified or validated in advance.</p>
+</section>
+<section class="research-block vision-block" id="research-vision">
+<h2>Research Vision</h2>
+<p>My broader objective is to contribute to a <strong>science and engineering methodology for adaptive AI safety</strong>. Reinforcement learning provides a useful setting because learning, sequential decision-making, environmental change, and safety interact explicitly, but the underlying problem extends to increasingly capable autonomous and agentic AI systems operating over long periods in changing environments.</p>
+<p>I aim to develop <strong>theory, algorithms, runtime mechanisms, and evaluation methodologies</strong> that connect adaptive learning with dependable safety assurance. The long-term goal is AI that can recognize when its assumptions are changing, anticipate safety-relevant consequences, adapt its safety mechanisms when justified, and remain conservative when reliable adaptation cannot be assured.</p>
+<p class="closing-vision"><em>Ultimately, I am interested in making adaptation itself a subject of safety assurance.</em></p>
+</section>
+</article>
+<aside aria-label="Research overview" class="research-rail">
+<div class="rail-profile">
+<img alt="Tim Tomashevskiy" class="rail-portrait" src="assets/tim-portrait.png"/>
+<p class="rail-goal">My goal is to develop methods and principles that make adaptation itself a subject of safety assurance — enabling intelligent systems to remain safe as the world they operate in continues to change.</p>
+</div>
+<div class="rail-card rail-topic-card">
+<div class="rail-label">Core areas</div>
+<p><a href="#current-research">Safe continual RL</a></p>
+<p><a href="#current-research">Safety under nonstationarity</a></p>
+<p><a href="#adaptive-safety-constraints">Adaptive safety constraints</a></p>
+<p><a href="#proactive-safety">Proactive safety</a></p>
+<p><a href="#runtime-safety">Runtime safety</a></p>
+</div>
+<div class="rail-card rail-topic-card">
+<div class="rail-label">Current frameworks</div>
+<p><a href="publications.html#lilac-plus">LILAC+</a></p>
+<p><a href="#context-based-constraints">Context-Based constraints</a></p>
+<p><a href="publications.html#adjustment-speed">Adaptation-Speed constraints</a></p>
+<p><a href="#soft-to-hard-constraints">Soft-to-Hard constraints</a></p>
+<p><a href="publications.html#cpss">CPSS runtime shielding</a></p>
+</div>
+<div class="rail-card rail-topic-card">
+<div class="rail-label">Research objectives</div>
+<p><a href="#research-focus">Maintain safety throughout operation</a></p>
+<p><a href="#predictive-safety">Anticipate and adapt to change</a></p>
+<p><a href="#current-research">Balance performance and safety</a></p>
+<p><a href="#runtime-safety">Intervene conservatively when needed</a></p>
+<p><a href="#research-vision">Build general principles and methods</a></p>
+</div>
+<div class="rail-card rail-link-card">
+<a href="publications.html">View my publications →</a>
+</div>
+</aside>
+</section>
+</main>
+<footer class="site-footer">
+<div class="shell footer-grid">
+<div>
+<h3><a class="footer-affiliation" href="https://www.mcmaster.ca/" rel="noopener noreferrer" target="_blank">McMaster University ↗</a></h3>
+<p><a href="https://www.eng.mcmaster.ca/cas/" rel="noopener noreferrer" target="_blank">Department of Computing &amp; Software ↗</a><br/><a href="https://www.mcmaster.ca/" rel="noopener noreferrer" target="_blank">McMaster University ↗</a><br/><a href="https://www.hamilton.ca/" rel="noopener noreferrer" target="_blank">Hamilton, Canada ↗</a></p>
+</div>
+<div>
+<h3>Contact</h3>
+<p><a href="mailto:tomashet@mcmaster.ca">tomashet@mcmaster.ca</a></p>
+<p><a href="https://www.researchgate.net/profile/Tim-Tomashevskiy">ResearchGate</a></p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<div class="footer-links">
+<a href="research.html">Research</a>
+<a href="about.html">About</a>
+<a href="publications.html">Publications</a>
+<a href="contact.html">Contact</a>
+<a href="resources.html">Reading Guide</a>
+
+</div>
+</div>
+</div>
+<div class="shell copyright">© 2026 Tim Tomashevskiy. All rights reserved.</div>
+</footer>
+</body>
+</html>
