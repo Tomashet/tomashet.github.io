@@ -677,3 +677,15 @@ html { scroll-behavior: smooth; }
   .cv-section { break-inside: avoid; }
   a { color: inherit !important; text-decoration: none !important; }
 }
+
+.pub-name-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.55;
+}
+.cv-updated {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
