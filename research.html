@@ -5,6 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Research interests of Tim Tomashevskiy: adaptive AI safety, safe continual reinforcement learning, safety under nonstationarity, predictive safety, and runtime safety." name="description"/>
+<link href="https://tomashet.github.io/research.html" rel="canonical"/>
+<meta content="Research — Tim Tomashevskiy" property="og:title"/>
+<meta content="Research interests of Tim Tomashevskiy: adaptive AI safety, safe continual reinforcement learning, safety under nonstationarity, predictive safety, and runtime safety." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tomashet.github.io/research.html" property="og:url"/>
+<meta content="https://tomashet.github.io/assets/tim-portrait.png" property="og:image"/>
+<link href="assets/tim-portrait.png" rel="icon" type="image/png"/>
 <title>Research — Tim Tomashevskiy</title>
 <link href="styles.css" rel="stylesheet"/>
 </head>
@@ -17,7 +24,8 @@
 <a href="resources.html">Reading Guide</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
-
+<a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Scholar ↗</a>
+<a class="cv-btn" href="cv.html" rel="noopener noreferrer" target="_blank">CV ↗</a>
 </nav>
 </div>
 </header>
@@ -36,6 +44,29 @@
 <span><a href="#adaptive-ai-safety">Adaptive AI Safety</a></span><span><a href="#current-research">Safe Continual Reinforcement Learning</a></span><span><a href="#runtime-safety">Runtime Safety</a></span>
 </div>
 </section>
+<section class="research-block research-at-a-glance" id="research-at-a-glance">
+<div class="section-heading-row">
+<h2>Research at a Glance</h2>
+<p>My work follows a simple safety loop: anticipate change, adapt the safety mechanism, and assure behavior at runtime.</p>
+</div>
+<div class="assurance-grid">
+<article class="assurance-card">
+<div class="assurance-label">Anticipate</div>
+<h3>Predictive &amp; Proactive Safety</h3>
+<p>Infer changing context, forecast safety-relevant conditions, quantify uncertainty, and construct constraints before risk materializes.</p>
+</article>
+<article class="assurance-card">
+<div class="assurance-label">Adapt</div>
+<h3>Adaptive Safety Constraints</h3>
+<p>Modify concrete safety requirements as operating conditions change while keeping them anchored to stable higher-level safety objectives.</p>
+</article>
+<article class="assurance-card">
+<div class="assurance-label">Assure</div>
+<h3>Runtime Safety Control</h3>
+<p>Intervene when learned adaptation is insufficient through projected constraints, shielding, fallback behavior, and conservative runtime control.</p>
+</article>
+</div>
+</section>
 <section class="research-block" id="research-focus">
 <h2>Research Focus</h2>
 <p>My research focuses on <strong>AI safety for adaptive and autonomous systems</strong>, with particular interests in safe and continual reinforcement learning, safety under nonstationarity, runtime safety, and functional safety for safety-critical systems.</p>
@@ -44,10 +75,42 @@
 </section>
 <section class="research-block" id="current-research">
 <h2>Current Research: Adaptive Safety under Nonstationarity</h2>
-<p>My current research focuses on <strong>safe continual reinforcement learning in nonstationary environments</strong>. Many safe-RL formulations assume that safety constraints or models specified for a particular operating regime remain valid. Under nonstationarity, however, a previously appropriate constraint can become obsolete, overly conservative, or unsafe. Moreover, even when an appropriate new constraint can be identified, the environment may change faster than the learning system can safely adapt. These two problems—<strong>constraint validity and adaptation speed</strong>—are central to my research.</p>
-<p id="adaptive-safety-constraints">I address them by treating concrete safety constraints as <strong>adaptive objects anchored to more stable, higher-level safety goals</strong>. <span id="lilac-plus">My LILAC+ framework</span> combines <span id="context-based-constraints">context-based constraints</span> that adapt safety requirements to current and predicted conditions; <span id="adaptation-speed-constraints">adaptation-speed constraints</span> that assess whether required adaptation exceeds the agent's estimated capacity; and <span id="soft-to-hard-constraints">soft-to-hard mechanisms</span> that translate cumulative safety budgets into local constraints suitable for runtime enforcement.</p>
-<p id="proactive-safety">A related line of my work develops <strong>proactive context-forecasted safety constraints</strong>. Rather than waiting until a distribution shift or safety violation occurs, the system infers environmental context, forecasts its evolution, accounts for predictive uncertainty, and constructs anticipatory safety constraints. The objective is to move safety from reactive correction toward <strong>proactive risk avoidance</strong>.</p>
-<p>I also develop <strong>evaluation methodologies for safe continual RL under controlled nonstationarity</strong>, including stationary, seen-nonstationary, and unseen-nonstationary regimes, with explicit evaluation of constraint validity, physical safety, intervention burden, and adaptation behavior.</p>
+<p>My current research focuses on <strong>safe continual reinforcement learning in nonstationary environments</strong>. Two questions are central: whether a safety constraint remains valid as operating conditions change, and whether the environment is changing faster than an agent can safely adapt.</p>
+<p id="adaptive-safety-constraints">I address these problems through <strong>adaptive safety constraints anchored to more stable safety objectives</strong>. My work combines context-aware constraint adaptation, adaptation-feasibility checks, proactive context forecasting, and runtime enforcement. I also develop evaluation methods that distinguish stationary, seen-nonstationary, and unseen-nonstationary regimes and measure constraint validity, physical safety, intervention burden, and adaptation behavior.</p>
+</section>
+<section class="research-block" id="selected-research">
+<div class="section-heading-row">
+<h2>Selected Research</h2>
+<p>Concrete systems and methods that operationalize the broader adaptive-safety agenda.</p>
+</div>
+<div class="project-grid">
+<article class="project-card" id="proactive-safety">
+<div class="project-status">CoLLAs 2026</div>
+<h3>Proactive Context-Forecasted Safety Constraints</h3>
+<p><strong>Problem.</strong> Reactive adaptation can occur only after risk has already increased. <strong>Approach.</strong> Infer latent context, forecast its evolution, quantify predictive uncertainty, and construct anticipatory safety constraints.</p>
+<p class="project-result"><strong>Result:</strong> 87.2% collision-rate reduction on the main benchmark and 92–97% across three held-out road layouts.</p>
+<div class="project-links"><a href="https://arxiv.org/abs/2609.08080" rel="noopener noreferrer" target="_blank">Paper ↗</a><a href="assets/CoLLAs_2026_Poster.pdf" rel="noopener noreferrer" target="_blank">Poster ↗</a><a href="https://drive.google.com/file/d/1xjxTXPpwPQGgDdFLk-ZQez_IN1ukGyGI/view?usp=sharing" rel="noopener noreferrer" target="_blank">Talk ↗</a></div>
+</article>
+<article class="project-card" id="lilac-plus">
+<div class="project-status">Adaptive safety framework</div>
+<h3>LILAC+</h3>
+<p><strong>Problem.</strong> Static safety constraints can become obsolete, overly conservative, or unsafe under nonstationarity. <strong>Approach.</strong> Combine context-based, adaptation-speed, and soft-to-hard mechanisms for policy adaptation and runtime protection.</p>
+<p class="project-result"><strong>Evaluation:</strong> reduced safety violations relative to unconstrained and fixed-constraint baselines across stationary and nonstationary regimes while maintaining competitive reward.</p>
+<div class="project-links"><a href="https://arxiv.org/abs/2605.18842" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
+</article>
+<article class="project-card" id="cpss">
+<div class="project-status">Runtime assurance</div>
+<h3>CPSS — Constraint Projection Safety Shield</h3>
+<p><strong>Problem.</strong> Cumulative safety requirements do not directly prevent unsafe individual actions. <strong>Approach.</strong> Project the remaining safety budget into enforceable action-level runtime constraints.</p>
+<p class="project-result"><strong>Result:</strong> 91.6% average collision-rate reduction (0.082 → 0.007) versus an unshielded DQN baseline across four highway-env driving tasks.</p>
+<div class="project-links"><a href="https://arxiv.org/abs/2605.18841" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
+</article>
+<article class="project-card" id="safeshiftrl">
+<div class="project-status">Work in progress · Benchmark</div>
+<h3>SafeShiftRL</h3>
+<p><strong>Goal.</strong> Provide a modular benchmark for evaluating safety under stationary, seen-nonstationary, and unseen-nonstationary conditions, with explicit measures of constraint validity, physical safety, intervention burden, and adaptation behavior.</p>
+</article>
+</div>
 </section>
 <section class="research-block">
 <div class="section-heading-row">
@@ -57,39 +120,23 @@
 <div class="direction-list">
 <section class="direction-item" id="predictive-safety">
 <div class="direction-index">01</div>
-<div>
-<h3>Predictive and Proactive AI Safety</h3>
-<p>I am interested in systems that reason not only about current risk but also about <strong>plausible future contexts and the future validity of their own safety assumptions</strong>. This includes context and risk forecasting, uncertainty calibration, and anticipatory constraint construction. A central question is how AI systems can anticipate the safety consequences of developing changes <strong>before unsafe conditions arise</strong>.</p>
-</div>
+<div><h3>Predictive and Proactive AI Safety</h3><p>How can an AI system reason about future contexts and the future validity of its own safety assumptions? I am interested in forecasting, calibrated uncertainty, and anticipatory constraint construction that act before unsafe conditions arise.</p></div>
 </section>
 <section class="direction-item" id="runtime-safety">
 <div class="direction-index">02</div>
-<div>
-<h3>Adaptive Runtime Safety and AI Control</h3>
-<p>I am interested in architectures combining policy-level adaptation with <strong>runtime monitoring, shielding, dynamic constraints, fallback behavior, and adaptive intervention</strong>. When environmental change exceeds an agent's ability to adapt safely, the system may need to tighten constraints, restrict autonomy, invoke fallback mechanisms, seek external supervision, and determine when normal autonomous operation can safely resume.</p>
-</div>
+<div><h3>Adaptive Runtime Safety and AI Control</h3><p>I am interested in runtime monitoring, shielding, dynamic constraints, fallback behavior, and intervention policies that restrict autonomy when environmental change exceeds an agent's safe adaptation capacity.</p></div>
 </section>
 <section class="direction-item" id="novelty-safety">
 <div class="direction-index">03</div>
-<div>
-<h3>Safety under Novelty and Unmodelled Change</h3>
-<p>A particularly difficult problem arises when an autonomous system encounters conditions outside its learned experience. I am interested in detecting unfamiliar contexts, quantifying epistemic uncertainty, determining when learned predictions or constraints should no longer be trusted, and connecting these assessments to conservative runtime behavior.</p>
-<blockquote class="compact-quote">How should an autonomous system recognize the limits of its own safety model?</blockquote>
-</div>
+<div><h3>Safety under Novelty and Unmodelled Change</h3><p>A central challenge is detecting unfamiliar contexts, quantifying epistemic uncertainty, and deciding when learned predictions or safety constraints should no longer be trusted.</p><blockquote class="compact-quote">How should an autonomous system recognize the limits of its own safety model?</blockquote></div>
 </section>
 <section class="direction-item" id="long-horizon-safety">
 <div class="direction-index">04</div>
-<div>
-<h3>Long-Horizon Agent Safety</h3>
-<p>As AI systems become increasingly autonomous, safety must account for <strong>accumulated risk and evolving interactions over trajectories</strong>, rather than individual actions alone. I am interested in trajectory-level risk monitoring, dynamic safety budgets, and adaptive intervention policies that coordinate local safety decisions with longer-term safety requirements.</p>
-</div>
+<div><h3>Long-Horizon Agent Safety</h3><p>For increasingly autonomous systems, safety must account for accumulated risk over trajectories. I am interested in trajectory-level monitoring, dynamic safety budgets, and intervention policies that coordinate local decisions with longer-term requirements.</p></div>
 </section>
 <section class="direction-item" id="multi-agent-safety">
 <div class="direction-index">05</div>
-<div>
-<h3>Multi-Agent Safety under Nonstationarity</h3>
-<p>Multiple learning agents create an important source of <strong>endogenous nonstationarity</strong> because their behavior and strategies can themselves change. I am interested in forecasting safety-relevant changes in other agents, adapting constraints to changing interaction regimes, detecting emerging collective risks, and extending adaptive-safety methodologies to multi-agent environments.</p>
-</div>
+<div><h3>Multi-Agent Safety under Nonstationarity</h3><p>Multiple learning agents create endogenous nonstationarity. I am interested in forecasting safety-relevant changes in other agents, adapting constraints to changing interaction regimes, and detecting emerging collective risks.</p></div>
 </section>
 </div>
 </section>
@@ -102,13 +149,13 @@
 <h2>Research Vision</h2>
 <p>My broader objective is to contribute to a <strong>science and engineering methodology for adaptive AI safety</strong>. Reinforcement learning provides a useful setting because learning, sequential decision-making, environmental change, and safety interact explicitly, but the underlying problem extends to increasingly capable autonomous and agentic AI systems operating over long periods in changing environments.</p>
 <p>I aim to develop <strong>theory, algorithms, runtime mechanisms, and evaluation methodologies</strong> that connect adaptive learning with dependable safety assurance. The long-term goal is AI that can recognize when its assumptions are changing, anticipate safety-relevant consequences, adapt its safety mechanisms when justified, and remain conservative when reliable adaptation cannot be assured.</p>
-<p class="closing-vision"><em>Ultimately, I am interested in making adaptation itself a subject of safety assurance.</em></p>
+<p class="closing-vision"><em>I want adaptation decisions themselves to be governed by explicit safety assumptions, evidence, and runtime controls.</em></p>
 </section>
 </article>
 <aside aria-label="Research overview" class="research-rail">
 <div class="rail-profile">
 <img alt="Tim Tomashevskiy" class="rail-portrait" src="assets/tim-portrait.png"/>
-<p class="rail-goal">My goal is to develop methods and principles that make adaptation itself a subject of safety assurance — enabling intelligent systems to remain safe as the world they operate in continues to change.</p>
+<p class="rail-goal">I develop methods for keeping adaptive systems safe as operating conditions, learned knowledge, and safety requirements evolve.</p>
 </div>
 <div class="rail-card rail-topic-card">
 <div class="rail-label">Core areas</div>
@@ -120,11 +167,11 @@
 </div>
 <div class="rail-card rail-topic-card">
 <div class="rail-label">Current frameworks</div>
-<p><a href="publications.html#lilac-plus">LILAC+</a></p>
-<p><a href="#context-based-constraints">Context-Based constraints</a></p>
+<p><a href="#lilac-plus">LILAC+</a></p>
+<p><a href="#lilac-plus">Context-Based constraints</a></p>
 <p><a href="publications.html#adjustment-speed">Adaptation-Speed constraints</a></p>
-<p><a href="#soft-to-hard-constraints">Soft-to-Hard constraints</a></p>
-<p><a href="publications.html#cpss">CPSS runtime shielding</a></p>
+<p><a href="#lilac-plus">Soft-to-Hard constraints</a></p>
+<p><a href="#cpss">CPSS runtime shielding</a></p>
 </div>
 <div class="rail-card rail-topic-card">
 <div class="rail-label">Research objectives</div>
@@ -134,9 +181,9 @@
 <p><a href="#runtime-safety">Intervene conservatively when needed</a></p>
 <p><a href="#research-vision">Build general principles and methods</a></p>
 </div>
-<div class="rail-card rail-link-card">
-<a href="publications.html">View my publications →</a>
-</div>
+<div class="rail-card rail-link-card"><a href="publications.html">View my publications →</a></div>
+<div class="rail-card rail-link-card"><a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a></div>
+<div class="rail-card rail-link-card"><a href="cv.html" rel="noopener noreferrer" target="_blank">Research CV ↗</a></div>
 </aside>
 </section>
 </main>
@@ -147,19 +194,19 @@
 <p><a href="https://www.eng.mcmaster.ca/cas/" rel="noopener noreferrer" target="_blank">Department of Computing &amp; Software ↗</a><br/><a href="https://www.mcmaster.ca/" rel="noopener noreferrer" target="_blank">McMaster University ↗</a><br/><a href="https://www.hamilton.ca/" rel="noopener noreferrer" target="_blank">Hamilton, Canada ↗</a></p>
 </div>
 <div>
-<h3>Contact</h3>
-<p><a href="mailto:tomashet@mcmaster.ca">tomashet@mcmaster.ca</a></p>
-<p><a href="https://www.researchgate.net/profile/Tim-Tomashevskiy">ResearchGate</a></p>
+<h3>Contact &amp; Profiles</h3>
+<p><a href="mailto:tomashevskiyt@gmail.com">tomashevskiyt@gmail.com</a><br/><a href="mailto:tomashet@mcmaster.ca">tomashet@mcmaster.ca</a></p>
+<p><a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a><br/><a href="https://www.linkedin.com/in/tim-tomashevski-0a2017281/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a><br/><a href="https://www.researchgate.net/profile/Tim-Tomashevskiy" rel="noopener noreferrer" target="_blank">ResearchGate ↗</a></p>
 </div>
 <div>
 <h3>Quick Links</h3>
 <div class="footer-links">
 <a href="research.html">Research</a>
-<a href="about.html">About</a>
 <a href="publications.html">Publications</a>
-<a href="contact.html">Contact</a>
 <a href="resources.html">Reading Guide</a>
-
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cv.html" rel="noopener noreferrer" target="_blank">CV ↗</a>
 </div>
 </div>
 </div>

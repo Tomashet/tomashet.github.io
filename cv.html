@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Research CV of Tim Tomashevskiy, AI safety researcher and PhD Candidate at McMaster University." name="description"/>
+<link href="https://tomashet.github.io/cv.html" rel="canonical"/>
+<meta content="Research CV — Tim Tomashevskiy" property="og:title"/>
+<meta content="AI safety researcher specializing in safe and continual reinforcement learning, runtime assurance, and safety under nonstationarity." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tomashet.github.io/cv.html" property="og:url"/>
+<meta content="https://tomashet.github.io/assets/tim-portrait.png" property="og:image"/>
+<link href="assets/tim-portrait.png" rel="icon" type="image/png"/>
+<title>Research CV — Tim Tomashevskiy</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header research-site-header">
+<div class="shell nav-wrap research-nav-wrap">
+<nav aria-label="Primary navigation" class="nav">
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="resources.html">Reading Guide</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Scholar ↗</a>
+<a class="cv-btn active" href="cv.html">CV</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="cv-page shell">
+<header class="cv-hero">
+<div>
+<div class="research-kicker">Research CV</div>
+<h1 class="cv-name">Tim Tomashevskiy</h1>
+<p class="cv-tagline">AI Safety Researcher · Reinforcement Learning &amp; Sequential Decision-Making · Runtime Assurance for Autonomous Systems</p>
+<p class="cv-contact">Toronto, Ontario, Canada · <a href="mailto:tomashevskiyt@gmail.com">tomashevskiyt@gmail.com</a> · <a href="index.html">Website</a> · <a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a> · <a href="https://www.linkedin.com/in/tim-tomashevski-0a2017281/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></p>
+</div>
+<button class="print-btn" type="button" onclick="window.print()">Print / Save as PDF</button>
+</header>
+
+<section class="cv-section">
+<h2>Research Profile</h2>
+<p>PhD candidate at McMaster University researching reinforcement learning and safety for autonomous systems operating under nonstationarity. Work spans safe and continual reinforcement learning, adaptive safety constraints, proactive context forecasting, runtime assurance, and evaluation under distribution shift — with the long-term goal of making adaptation itself a subject of safety assurance. Earlier work in automotive functional safety grounds this research in a systems-safety approach to learning-enabled and autonomous systems.</p>
+<p><strong>Core expertise:</strong> Safe RL · Continual / Adaptive Learning · Nonstationarity &amp; Distribution Shift · Runtime Assurance &amp; Shielding · Sequential Decision-Making · Autonomous Systems · Functional Safety</p>
+</section>
+
+<section class="cv-section">
+<h2>Research Experience</h2>
+<div class="cv-role">
+<div class="cv-role-head"><h3>PhD Researcher — AI Safety &amp; Reinforcement Learning</h3><span>2022 – Present</span></div>
+<p class="cv-org">McMaster University, Department of Computing and Software · Hamilton, ON</p>
+<ul>
+<li>Conduct an independent research program on maintaining safety as environmental conditions, learned knowledge, and safety constraints evolve over time.</li>
+<li>Designed context-dependent and adaptation-speed safety constraints for nonstationary RL, including mechanisms for detecting when environmental change exceeds an agent's safe adaptation capacity.</li>
+<li>Developed proactive, context-forecasted safety constraints that infer latent context, forecast its evolution, quantify predictive uncertainty, and construct anticipatory constraints before unsafe behavior emerges.</li>
+<li>Built CPSS (Constraint Projection Safety Shield), a runtime mechanism converting cumulative safety budgets into enforceable, action-level constraints; reduced average collision rate by <strong>91.6%</strong> (0.082 → 0.007) versus an unshielded DQN baseline across four highway-env driving tasks.</li>
+<li>Architected LILAC+, a modular framework integrating context-based, adaptation-speed, and soft-to-hard safety constraints; reduced safety violations relative to unconstrained and fixed-constraint baselines across stationary, seen-nonstationary, and unseen-nonstationary regimes while maintaining competitive reward.</li>
+<li>Designed and ran RL experiments (DQN/PPO) in nonstationary driving environments; CoLLAs 2026 evaluation achieved an <strong>87.2%</strong> collision-rate reduction on the main benchmark and <strong>92–97%</strong> reduction across three held-out road layouts.</li>
+<li>Developing SafeShiftRL, a modular benchmark for evaluating safety under stationary, seen-nonstationary, and unseen-nonstationary conditions.</li>
+</ul>
+</div>
+
+<div class="cv-role">
+<div class="cv-role-head"><h3>Research Assistant / Research Software Developer — Automotive Functional Safety</h3><span>2019 – 2022</span></div>
+<p class="cv-org">McMaster Centre for Software Certification (McSCert) — LEAP/AVIN project with Stellantis · Hamilton, ON</p>
+<ul>
+<li>Contributed to research on functional safety of centralized automotive electrical/electronic (E/E) architectures and domain controllers.</li>
+<li>Developed and validated models and software for electric-vehicle powertrain and communication systems using MATLAB, Python, C/C++, TensorFlow, and PyTorch.</li>
+<li>Investigated safety architectures for catastrophic loss of a centralized domain controller and contributed to a cost-efficient fallback architecture preserving essential vehicle functionality.</li>
+<li>Co-authored an IEEE/IFIP DSN-W 2021 paper and presented research in Stellantis project meetings and at SSIV 2021.</li>
+</ul>
+</div>
+</section>
+
+<section class="cv-section">
+<h2>Selected Publications</h2>
+<ul class="cv-publications">
+<li><strong>Proactive Context-Forecasted Safety Constraints for Nonstationary Reinforcement Learning</strong> — CoLLAs 2026; arXiv:2609.08080; sole author.</li>
+<li><strong>Safe Continual Reinforcement Learning under Nonstationarity via Adaptive Safety Constraints</strong> — arXiv:2605.18842, 2026; sole author.</li>
+<li><strong>From Cumulative Constraints to Adaptive Runtime Safety Control for Nonstationary Reinforcement Learning</strong> — arXiv:2605.18841, 2026; sole author.</li>
+<li><strong>Adjustment Speed as a Safety Constraint for Nonstationary Reinforcement Learning</strong> — arXiv:2607.21646, 2026; sole author.</li>
+<li><strong>Safe Continual Reinforcement Learning Methods for Nonstationary Environments: Towards a Survey of the State of the Art</strong> — arXiv:2601.05152, 2026; sole author.</li>
+<li><strong>A Safety Architecture for Centralized E/E Architectures</strong> — IEEE/IFIP DSN Workshops, 2021; with V. Bandur, V. Pantelic, M. Lawford.</li>
+</ul>
+</section>
+
+<section class="cv-section">
+<h2>Prior Experience</h2>
+<div class="cv-role">
+<div class="cv-role-head"><h3>Data Analyst / Architect / Lead Developer — CGStar Technology</h3><span>2013 – 2019</span></div>
+<ul>
+<li><strong>Data Analyst (2017–2019):</strong> built SQL/Tableau reporting infrastructure and designed product experiments that surfaced process and business improvements; led a small team delivering data products for internal decision-making.</li>
+<li><strong>Architect / Lead Developer (2013–2017):</strong> designed Java/J2EE architectures for complex software systems and translated mathematical and statistical models into production implementations.</li>
+</ul>
+</div>
+</section>
+
+<div class="cv-two-col">
+<section class="cv-section">
+<h2>Education</h2>
+<p><strong>PhD Candidate, Computing and Software</strong> — McMaster University (Expected 2026)</p>
+<p><strong>MBA</strong> — Weatherhead School of Management, Case Western Reserve University</p>
+<p><strong>M.Sc., Applied Mathematics and Information Technology</strong> — Moscow State Institute of Radio Engineering, Electronics and Automation</p>
+<p><strong>B.S. (Honours), Computer Science</strong> — MIREA, Faculty of Automation</p>
+</section>
+<section class="cv-section">
+<h2>Technical Skills</h2>
+<p><strong>Machine Learning &amp; Research:</strong> Reinforcement Learning (DQN, PPO), Safe RL, Constrained RL, Continual Learning, Sequential Decision-Making, Deep Learning, Uncertainty-Aware Forecasting, Experimental Design</p>
+<p><strong>AI Safety:</strong> Adaptive Safety Constraints, Runtime Assurance / Shielding, Safety under Nonstationarity, Distribution Shift, Functional Safety, Safety Evaluation</p>
+<p><strong>Programming &amp; Tools:</strong> Python, PyTorch, TensorFlow, MATLAB, C/C++, Java/J2EE, SQL, Tableau</p>
+</section>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="shell footer-grid">
+<div><h3><a class="footer-affiliation" href="https://www.mcmaster.ca/" rel="noopener noreferrer" target="_blank">McMaster University ↗</a></h3><p><a href="https://www.eng.mcmaster.ca/cas/" rel="noopener noreferrer" target="_blank">Department of Computing &amp; Software ↗</a><br/>Hamilton, Canada</p></div>
+<div><h3>Contact &amp; Profiles</h3><p><a href="mailto:tomashevskiyt@gmail.com">tomashevskiyt@gmail.com</a><br/><a href="mailto:tomashet@mcmaster.ca">tomashet@mcmaster.ca</a></p><p><a href="https://scholar.google.com/citations?user=U_OvFxQAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a><br/><a href="https://www.linkedin.com/in/tim-tomashevski-0a2017281/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></p></div>
+<div><h3>Quick Links</h3><div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="resources.html">Reading Guide</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div>
+</div>
+<div class="shell copyright">© 2026 Tim Tomashevskiy. All rights reserved.</div>
+</footer>
+</body>
+</html>
