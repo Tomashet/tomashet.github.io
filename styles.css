@@ -495,3 +495,145 @@ html { scroll-behavior: smooth; }
 .education-row a:hover { color: var(--blue, #0b5bd3); }
 .education-subdegree { margin-top: .38rem !important; }
 .education-subdegree strong { font-weight: 650; color: var(--navy, #0c2340); }
+
+
+/* 2026 research portfolio refresh */
+.research-meta {
+  margin-top: 12px;
+  color: var(--blue);
+  font-size: .84rem;
+  font-weight: 750;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.research-card-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+.research-card-link:hover { text-decoration: underline; }
+
+.assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.assurance-card {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 20px 20px 17px;
+  background: linear-gradient(180deg, #fff, #fbfcfe);
+}
+.assurance-label {
+  color: var(--blue);
+  font-size: .83rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+.assurance-card h3 { margin: 0 0 9px; }
+.assurance-card p { margin: 0; font-size: .98rem; line-height: 1.58; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 22px;
+  background: #fff;
+}
+.project-card h3 { margin: 5px 0 11px; }
+.project-card p { font-size: .98rem; line-height: 1.6; margin-bottom: 10px; }
+.project-status {
+  color: var(--blue);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.project-result {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 13px;
+}
+.project-links a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+.project-links a:hover { text-decoration: underline; }
+
+@media (max-width: 1120px) and (min-width: 901px) {
+  .nav { gap: 18px; }
+  .nav a { font-size: .91rem; }
+  .cv-btn { padding: 11px 14px; }
+}
+
+@media (max-width: 900px) {
+  .nav-wrap,
+  .research-site-header .research-nav-wrap {
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: flex-start;
+  }
+  .nav-wrap {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .research-site-header .research-nav-wrap {
+    display: block;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 3px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav a,
+  .nav a:not(.cv-btn) {
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: #fff;
+    font-size: .9rem;
+  }
+  .nav a.active {
+    border-color: #b8c8df;
+    background: #f6f9fd;
+  }
+  .nav .cv-btn {
+    padding: 8px 12px;
+    border-color: #0a4aa6;
+    background: linear-gradient(180deg, #0a4aa6, #003478);
+  }
+  .assurance-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .project-card, .assurance-card { padding: 17px; }
+  .research-item { padding-right: 0; }
+}
