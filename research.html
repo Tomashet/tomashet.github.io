@@ -4,15 +4,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Research interests of Tim Tomashevskiy: adaptive AI safety, safe continual reinforcement learning, safety under nonstationarity, predictive safety, and runtime safety." name="description"/>
+<meta content="Research by Tim Tomashevskiy on adaptive AI safety, safe continual reinforcement learning, nonstationarity, proactive safety, and runtime assurance." name="description"/>
 <link href="https://tomashet.github.io/research.html" rel="canonical"/>
-<meta content="Research — Tim Tomashevskiy" property="og:title"/>
-<meta content="Research interests of Tim Tomashevskiy: adaptive AI safety, safe continual reinforcement learning, safety under nonstationarity, predictive safety, and runtime safety." property="og:description"/>
+<meta content="Research | Tim Tomashevskiy — Safe RL &amp; AI Safety" property="og:title"/>
+<meta content="Research by Tim Tomashevskiy on adaptive AI safety, safe continual reinforcement learning, nonstationarity, proactive safety, and runtime assurance." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://tomashet.github.io/research.html" property="og:url"/>
 <meta content="https://tomashet.github.io/assets/tim-portrait.png" property="og:image"/>
 <link href="assets/tim-portrait.png" rel="icon" type="image/png"/>
-<title>Research — Tim Tomashevskiy</title>
+<title>Research | Tim Tomashevskiy — Safe RL &amp; AI Safety</title>
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
@@ -89,21 +89,21 @@
 <h3>Proactive Context-Forecasted Safety Constraints</h3>
 <p><strong>Problem.</strong> Reactive adaptation can occur only after risk has already increased. <strong>Approach.</strong> Infer latent context, forecast its evolution, quantify predictive uncertainty, and construct anticipatory safety constraints.</p>
 <p class="project-result"><strong>Result:</strong> 87.2% collision-rate reduction on the main benchmark and 92–97% across three held-out road layouts.</p>
-<div class="project-links"><a href="https://arxiv.org/abs/2609.08080" rel="noopener noreferrer" target="_blank">Paper ↗</a><a href="assets/CoLLAs_2026_Poster.pdf" rel="noopener noreferrer" target="_blank">Poster ↗</a><a href="https://drive.google.com/file/d/1xjxTXPpwPQGgDdFLk-ZQez_IN1ukGyGI/view?usp=sharing" rel="noopener noreferrer" target="_blank">Talk ↗</a></div>
+<div class="project-links"><a href="papers/proactive-context-forecasted-safety.html">Details →</a><a href="https://arxiv.org/abs/2609.08080" rel="noopener noreferrer" target="_blank">Paper ↗</a><a href="assets/CoLLAs_2026_Poster.pdf" rel="noopener noreferrer" target="_blank">Poster ↗</a><a href="https://drive.google.com/file/d/1xjxTXPpwPQGgDdFLk-ZQez_IN1ukGyGI/view?usp=sharing" rel="noopener noreferrer" target="_blank">Talk ↗</a></div>
 </article>
 <article class="project-card" id="lilac-plus">
 <div class="project-status">Adaptive safety framework</div>
 <h3>LILAC+</h3>
 <p><strong>Problem.</strong> Static safety constraints can become obsolete, overly conservative, or unsafe under nonstationarity. <strong>Approach.</strong> Combine context-based, adaptation-speed, and soft-to-hard mechanisms for policy adaptation and runtime protection.</p>
 <p class="project-result"><strong>Evaluation:</strong> reduced safety violations relative to unconstrained and fixed-constraint baselines across stationary and nonstationary regimes while maintaining competitive reward.</p>
-<div class="project-links"><a href="https://arxiv.org/abs/2605.18842" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
+<div class="project-links"><a href="papers/lilac-plus.html">Details →</a><a href="https://arxiv.org/abs/2605.18842" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
 </article>
 <article class="project-card" id="cpss">
 <div class="project-status">Runtime assurance</div>
 <h3>CPSS — Constraint Projection Safety Shield</h3>
 <p><strong>Problem.</strong> Cumulative safety requirements do not directly prevent unsafe individual actions. <strong>Approach.</strong> Project the remaining safety budget into enforceable action-level runtime constraints.</p>
 <p class="project-result"><strong>Result:</strong> 91.6% average collision-rate reduction (0.082 → 0.007) versus an unshielded DQN baseline across four highway-env driving tasks.</p>
-<div class="project-links"><a href="https://arxiv.org/abs/2605.18841" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
+<div class="project-links"><a href="papers/cpss.html">Details →</a><a href="https://arxiv.org/abs/2605.18841" rel="noopener noreferrer" target="_blank">Paper ↗</a></div>
 </article>
 <article class="project-card" id="safeshiftrl">
 <div class="project-status">Work in progress · Benchmark</div>
@@ -169,7 +169,7 @@
 <div class="rail-label">Current frameworks</div>
 <p><a href="#lilac-plus">LILAC+</a></p>
 <p><a href="#lilac-plus">Context-Based constraints</a></p>
-<p><a href="publications.html#adjustment-speed">Adaptation-Speed constraints</a></p>
+<p><a href="papers/adjustment-speed.html">Adaptation-Speed constraints</a></p>
 <p><a href="#lilac-plus">Soft-to-Hard constraints</a></p>
 <p><a href="#cpss">CPSS runtime shielding</a></p>
 </div>

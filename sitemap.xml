@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://tomashet.github.io/</loc>
   </url>
@@ -25,4 +24,23 @@
     <loc>https://tomashet.github.io/contact.html</loc>
   </url>
 
+  <url>
+    <loc>https://tomashet.github.io/papers/proactive-context-forecasted-safety.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tomashet.github.io/papers/lilac-plus.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tomashet.github.io/papers/cpss.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tomashet.github.io/papers/adjustment-speed.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tomashet.github.io/papers/safe-continual-rl-survey.html</loc>
+  </url>
 </urlset>
