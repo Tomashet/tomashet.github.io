@@ -689,3 +689,50 @@ html { scroll-behavior: smooth; }
   color: var(--muted);
   font-size: .92rem;
 }
+
+
+/* Academic indexing / publication landing pages */
+.pub-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.pub-title-link:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.paper-page .secondary-title {
+  max-width: 1040px;
+  font-size: clamp(2.15rem, 3.7vw, 3.65rem);
+  line-height: 1.08;
+}
+.paper-meta {
+  margin: 14px 0 0;
+  color: var(--blue-dark);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.paper-meta strong {
+  color: var(--navy, #0c2340);
+}
+.paper-citation {
+  border-left: 2px solid var(--orange);
+  background: var(--soft);
+  padding: 15px 18px;
+  margin-top: 16px;
+}
+.paper-citation p {
+  margin: 0;
+}
+.paper-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.paper-keywords span {
+  background: var(--soft);
+  color: #344054;
+  padding: 7px 10px;
+  border-radius: 3px;
+  font-size: .88rem;
+}
